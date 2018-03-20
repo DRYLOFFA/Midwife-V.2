@@ -1,0 +1,36 @@
+c:\users\dryloffa\documents\visual studio 2017\Projects\Midwife v.2\Midwife v.2\bin\Debug\Midwife v.2.exe.config
+c:\users\dryloffa\documents\visual studio 2017\Projects\Midwife v.2\Midwife v.2\bin\Debug\Midwife v.2.exe
+c:\users\dryloffa\documents\visual studio 2017\Projects\Midwife v.2\Midwife v.2\bin\Debug\Midwife v.2.pdb
+c:\users\dryloffa\documents\visual studio 2017\Projects\Midwife v.2\Midwife v.2\obj\Debug\Midwife_v._2.Properties.Resources.resources
+c:\users\dryloffa\documents\visual studio 2017\Projects\Midwife v.2\Midwife v.2\obj\Debug\Midwife v.2.csproj.GenerateResource.Cache
+c:\users\dryloffa\documents\visual studio 2017\Projects\Midwife v.2\Midwife v.2\obj\Debug\Midwife v.2.csproj.CoreCompileInputs.cache
+c:\users\dryloffa\documents\visual studio 2017\Projects\Midwife v.2\Midwife v.2\obj\Debug\Midwife v.2.exe
+c:\users\dryloffa\documents\visual studio 2017\Projects\Midwife v.2\Midwife v.2\obj\Debug\Midwife v.2.pdb
+c:\users\dryloffa\documents\visual studio 2017\Projects\Midwife v.2\Midwife v.2\obj\Debug\Midwife_v._2.MainPage.resources
+c:\users\dryloffa\documents\visual studio 2017\Projects\Midwife v.2\Midwife v.2\obj\Debug\Midwife_v._2.Welcome.resources
+c:\users\dryloffa\documents\visual studio 2017\Projects\Midwife v.2\Midwife v.2\obj\Debug\Midwife_v._2.New_Client.resources
+c:\users\dryloffa\documents\visual studio 2017\Projects\Midwife v.2\Midwife v.2\obj\Debug\Midwife_v._2.ExistingClients.resources
+c:\users\dryloffa\documents\visual studio 2017\Projects\Midwife v.2\Midwife v.2\obj\Debug\Midwife_v._2.Calander.resources
+C:\Users\DRYLOFFA\Desktop\Midwife Project\2\Midwife v.2\Midwife v.2\bin\Debug\Midwife v.2.exe.config
+C:\Users\DRYLOFFA\Desktop\Midwife Project\2\Midwife v.2\Midwife v.2\bin\Debug\Midwife v.2.exe
+C:\Users\DRYLOFFA\Desktop\Midwife Project\2\Midwife v.2\Midwife v.2\bin\Debug\Midwife v.2.pdb
+C:\Users\DRYLOFFA\Desktop\Midwife Project\2\Midwife v.2\Midwife v.2\bin\Debug\EntityFramework.dll
+C:\Users\DRYLOFFA\Desktop\Midwife Project\2\Midwife v.2\Midwife v.2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DRYLOFFA\Desktop\Midwife Project\2\Midwife v.2\Midwife v.2\bin\Debug\EntityFramework.xml
+C:\Users\DRYLOFFA\Desktop\Midwife Project\2\Midwife v.2\Midwife v.2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DRYLOFFA\Desktop\Midwife Project\2\Midwife v.2\Midwife v.2\obj\Debug\Midwife v.2.csprojResolveAssemblyReference.cache
+C:\Users\DRYLOFFA\Desktop\Midwife Project\2\Midwife v.2\Midwife v.2\obj\Debug\Midwife_v._2.Calander.resources
+C:\Users\DRYLOFFA\Desktop\Midwife Project\2\Midwife v.2\Midwife v.2\obj\Debug\Midwife_v._2.ExistingClients.resources
+C:\Users\DRYLOFFA\Desktop\Midwife Project\2\Midwife v.2\Midwife v.2\obj\Debug\Midwife_v._2.MainPage.resources
+C:\Users\DRYLOFFA\Desktop\Midwife Project\2\Midwife v.2\Midwife v.2\obj\Debug\Midwife_v._2.New_Client.resources
+C:\Users\DRYLOFFA\Desktop\Midwife Project\2\Midwife v.2\Midwife v.2\obj\Debug\Midwife_v._2.Welcome.resources
+C:\Users\DRYLOFFA\Desktop\Midwife Project\2\Midwife v.2\Midwife v.2\obj\Debug\Midwife_v._2.Properties.Resources.resources
+C:\Users\DRYLOFFA\Desktop\Midwife Project\2\Midwife v.2\Midwife v.2\obj\Debug\Midwife v.2.csproj.GenerateResource.Cache
+C:\Users\DRYLOFFA\Desktop\Midwife Project\2\Midwife v.2\Midwife v.2\obj\Debug\Midwife v.2.csproj.CoreCompileInputs.cache
+C:\Users\DRYLOFFA\Desktop\Midwife Project\2\Midwife v.2\Midwife v.2\obj\Debug\Midwife v.2.exe
+C:\Users\DRYLOFFA\Desktop\Midwife Project\2\Midwife v.2\Midwife v.2\obj\Debug\Midwife v.2.pdb
+C:\Users\DRYLOFFA\Documents\Visual Studio 2017\Projects\Midwife v.2\Midwife v.2\bin\Debug\EntityFramework.dll
+C:\Users\DRYLOFFA\Documents\Visual Studio 2017\Projects\Midwife v.2\Midwife v.2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DRYLOFFA\Documents\Visual Studio 2017\Projects\Midwife v.2\Midwife v.2\bin\Debug\EntityFramework.xml
+C:\Users\DRYLOFFA\Documents\Visual Studio 2017\Projects\Midwife v.2\Midwife v.2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DRYLOFFA\Documents\Visual Studio 2017\Projects\Midwife v.2\Midwife v.2\obj\Debug\Midwife v.2.csprojResolveAssemblyReference.cache

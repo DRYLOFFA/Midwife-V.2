@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MidwifeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="Client_ID" />
+    </Key>
+    <Property Name="Client_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_Name" Type="varchar(max)" />
+    <Property Name="Last_Name" Type="varchar(max)" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="Street_NO#" Type="varchar(max)" />
+    <Property Name="Street_Name" Type="varchar(max)" />
+    <Property Name="Subburb" Type="varchar(max)" />
+    <Property Name="City" Type="varchar(max)" />
+    <Property Name="State" Type="varchar(max)" />
+    <Property Name="Post_Code" Type="varchar" MaxLength="4" />
+    <Property Name="Ethnicity" Type="varchar(max)" />
+    <Property Name="Children" Type="varchar" MaxLength="2" />
+    <Property Name="Email" Type="varchar(max)" />
+    <Property Name="Land_Line" Type="varchar" MaxLength="15" />
+    <Property Name="Cell_Phone" Type="varchar" MaxLength="15" />
+    <Property Name="First_Name_P" Type="varchar(max)" />
+    <Property Name="Last_Name_P" Type="varchar(max)" />
+    <Property Name="Street_NO#_P" Type="varchar(max)" />
+    <Property Name="Street_Name_P" Type="varchar(max)" />
+    <Property Name="Subburb_P" Type="varchar(max)" />
+    <Property Name="City_P" Type="varchar(max)" />
+    <Property Name="State_P" Type="varchar(max)" />
+    <Property Name="Post_Code_P" Type="varchar" MaxLength="4" />
+    <Property Name="Land_Line_P" Type="varchar" MaxLength="15" />
+    <Property Name="Cell_Phone_P" Type="varchar" MaxLength="15" />
+    <Property Name="First_Name_E" Type="varchar(max)" />
+    <Property Name="Last_Name_E" Type="varchar(max)" />
+    <Property Name="Street_NO#_E" Type="varchar(max)" />
+    <Property Name="Street_Name_E" Type="varchar(max)" />
+    <Property Name="Subburb_E" Type="varchar(max)" />
+    <Property Name="City_E" Type="varchar(max)" />
+    <Property Name="State_E" Type="varchar(max)" />
+    <Property Name="Post_Code_E" Type="varchar" MaxLength="4" />
+    <Property Name="Land_Line_E" Type="varchar" MaxLength="15" />
+    <Property Name="Cell_Phone_E" Type="varchar" MaxLength="15" />
+    <Property Name="Sex" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Users_ID" />
+    </Key>
+    <Property Name="Users_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="15" />
+    <Property Name="Password" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Visits">
+    <Key>
+      <PropertyRef Name="Visit_ID" />
+    </Key>
+    <Property Name="Visit_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VisitDate" Type="date" />
+    <Property Name="Notes" Type="varchar(max)" />
+    <Property Name="Client_ID" Type="int" />
+  </EntityType>
+  <Association Name="client_fk">
+    <End Role="Client" Type="Self.Client" Multiplicity="0..1" />
+    <End Role="Visits" Type="Self.Visits" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="Client_ID" />
+      </Principal>
+      <Dependent Role="Visits">
+        <PropertyRef Name="Client_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MidwifeModelStoreContainer">
+    <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Visits" EntityType="Self.Visits" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="client_fk" Association="Self.client_fk">
+      <End Role="Client" EntitySet="Client" />
+      <End Role="Visits" EntitySet="Visits" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

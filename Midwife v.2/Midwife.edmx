@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MidwifeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="Client_ID" />
+          </Key>
+          <Property Name="Client_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="First_Name" Type="varchar(max)" />
+          <Property Name="Last_Name" Type="varchar(max)" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Street_NO#" Type="varchar(max)" />
+          <Property Name="Street_Name" Type="varchar(max)" />
+          <Property Name="Subburb" Type="varchar(max)" />
+          <Property Name="City" Type="varchar(max)" />
+          <Property Name="State" Type="varchar(max)" />
+          <Property Name="Post_Code" Type="varchar" MaxLength="4" />
+          <Property Name="Ethnicity" Type="varchar(max)" />
+          <Property Name="Children" Type="varchar" MaxLength="2" />
+          <Property Name="Email" Type="varchar(max)" />
+          <Property Name="Land_Line" Type="varchar" MaxLength="15" />
+          <Property Name="Cell_Phone" Type="varchar" MaxLength="15" />
+          <Property Name="First_Name_P" Type="varchar(max)" />
+          <Property Name="Last_Name_P" Type="varchar(max)" />
+          <Property Name="Street_NO#_P" Type="varchar(max)" />
+          <Property Name="Street_Name_P" Type="varchar(max)" />
+          <Property Name="Subburb_P" Type="varchar(max)" />
+          <Property Name="City_P" Type="varchar(max)" />
+          <Property Name="State_P" Type="varchar(max)" />
+          <Property Name="Post_Code_P" Type="varchar" MaxLength="4" />
+          <Property Name="Land_Line_P" Type="varchar" MaxLength="15" />
+          <Property Name="Cell_Phone_P" Type="varchar" MaxLength="15" />
+          <Property Name="First_Name_E" Type="varchar(max)" />
+          <Property Name="Last_Name_E" Type="varchar(max)" />
+          <Property Name="Street_NO#_E" Type="varchar(max)" />
+          <Property Name="Street_Name_E" Type="varchar(max)" />
+          <Property Name="Subburb_E" Type="varchar(max)" />
+          <Property Name="City_E" Type="varchar(max)" />
+          <Property Name="State_E" Type="varchar(max)" />
+          <Property Name="Post_Code_E" Type="varchar" MaxLength="4" />
+          <Property Name="Land_Line_E" Type="varchar" MaxLength="15" />
+          <Property Name="Cell_Phone_E" Type="varchar" MaxLength="15" />
+          <Property Name="Sex" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Users_ID" />
+          </Key>
+          <Property Name="Users_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="15" />
+          <Property Name="Password" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="Visits">
+          <Key>
+            <PropertyRef Name="Visit_ID" />
+          </Key>
+          <Property Name="Visit_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VisitDate" Type="date" />
+          <Property Name="Notes" Type="varchar(max)" />
+          <Property Name="Client_ID" Type="int" />
+        </EntityType>
+        <Association Name="client_fk">
+          <End Role="Client" Type="Self.Client" Multiplicity="0..1" />
+          <End Role="Visits" Type="Self.Visits" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="Client_ID" />
+            </Principal>
+            <Dependent Role="Visits">
+              <PropertyRef Name="Client_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MidwifeModelStoreContainer">
+          <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Visits" EntityType="Self.Visits" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="client_fk" Association="Self.client_fk">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Visits" EntitySet="Visits" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MidwifeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="Client_ID" />
+          </Key>
+          <Property Name="Client_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="First_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Last_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Street_NO_" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Street_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Subburb" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Post_Code" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Ethnicity" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Children" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Land_Line" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Cell_Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="First_Name_P" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Last_Name_P" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Street_NO__P" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Street_Name_P" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Subburb_P" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="City_P" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="State_P" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Post_Code_P" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Land_Line_P" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Cell_Phone_P" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="First_Name_E" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Last_Name_E" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Street_NO__E" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Street_Name_E" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Subburb_E" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="City_E" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="State_E" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Post_Code_E" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Land_Line_E" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Cell_Phone_E" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Visits" Relationship="MidwifeModel.client_fk" FromRole="Client" ToRole="Visit" />
+          <Property Name="Sex" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="MidwifeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Clients" EntityType="Self.Client" />
+          <EntitySet Name="Visits" EntityType="MidwifeModel.Visit" />
+          <AssociationSet Name="client_fk" Association="MidwifeModel.client_fk">
+            <End Role="Client" EntitySet="Clients" />
+            <End Role="Visit" EntitySet="Visits" />
+          </AssociationSet>
+          <EntitySet Name="Users" EntityType="MidwifeModel.User" />
+        </EntityContainer>
+        <EntityType Name="Visit">
+          <Key>
+            <PropertyRef Name="Visit_ID" />
+          </Key>
+          <Property Name="Visit_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VisitDate" Type="DateTime" Precision="0" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Client_ID" Type="Int32" />
+          <NavigationProperty Name="Client" Relationship="MidwifeModel.client_fk" FromRole="Visit" ToRole="Client" />
+        </EntityType>
+        <Association Name="client_fk">
+          <End Type="MidwifeModel.Client" Role="Client" Multiplicity="0..1" />
+          <End Type="MidwifeModel.Visit" Role="Visit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="Client_ID" />
+            </Principal>
+            <Dependent Role="Visit">
+              <PropertyRef Name="Client_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Users_ID" />
+          </Key>
+          <Property Name="Users_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MidwifeModelStoreContainer" CdmEntityContainer="MidwifeEntities">
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="MidwifeModel.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Street_NO_" ColumnName="Street_NO#" />
+                <ScalarProperty Name="Street_Name" ColumnName="Street_Name" />
+                <ScalarProperty Name="Subburb" ColumnName="Subburb" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Post_Code" ColumnName="Post_Code" />
+                <ScalarProperty Name="Ethnicity" ColumnName="Ethnicity" />
+                <ScalarProperty Name="Children" ColumnName="Children" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Land_Line" ColumnName="Land_Line" />
+                <ScalarProperty Name="Cell_Phone" ColumnName="Cell_Phone" />
+                <ScalarProperty Name="First_Name_P" ColumnName="First_Name_P" />
+                <ScalarProperty Name="Last_Name_P" ColumnName="Last_Name_P" />
+                <ScalarProperty Name="Street_NO__P" ColumnName="Street_NO#_P" />
+                <ScalarProperty Name="Street_Name_P" ColumnName="Street_Name_P" />
+                <ScalarProperty Name="Subburb_P" ColumnName="Subburb_P" />
+                <ScalarProperty Name="City_P" ColumnName="City_P" />
+                <ScalarProperty Name="State_P" ColumnName="State_P" />
+                <ScalarProperty Name="Post_Code_P" ColumnName="Post_Code_P" />
+                <ScalarProperty Name="Land_Line_P" ColumnName="Land_Line_P" />
+                <ScalarProperty Name="Cell_Phone_P" ColumnName="Cell_Phone_P" />
+                <ScalarProperty Name="First_Name_E" ColumnName="First_Name_E" />
+                <ScalarProperty Name="Last_Name_E" ColumnName="Last_Name_E" />
+                <ScalarProperty Name="Street_NO__E" ColumnName="Street_NO#_E" />
+                <ScalarProperty Name="Street_Name_E" ColumnName="Street_Name_E" />
+                <ScalarProperty Name="Subburb_E" ColumnName="Subburb_E" />
+                <ScalarProperty Name="City_E" ColumnName="City_E" />
+                <ScalarProperty Name="State_E" ColumnName="State_E" />
+                <ScalarProperty Name="Post_Code_E" ColumnName="Post_Code_E" />
+                <ScalarProperty Name="Land_Line_E" ColumnName="Land_Line_E" />
+                <ScalarProperty Name="Cell_Phone_E" ColumnName="Cell_Phone_E" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Visits">
+            <EntityTypeMapping TypeName="MidwifeModel.Visit">
+              <MappingFragment StoreEntitySet="Visits">
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="VisitDate" ColumnName="VisitDate" />
+                <ScalarProperty Name="Visit_ID" ColumnName="Visit_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="MidwifeModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Users_ID" ColumnName="Users_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

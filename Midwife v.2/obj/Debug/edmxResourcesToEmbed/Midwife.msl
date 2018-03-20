@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MidwifeModelStoreContainer" CdmEntityContainer="MidwifeEntities">
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="MidwifeModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Street_NO_" ColumnName="Street_NO#" />
+          <ScalarProperty Name="Street_Name" ColumnName="Street_Name" />
+          <ScalarProperty Name="Subburb" ColumnName="Subburb" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Post_Code" ColumnName="Post_Code" />
+          <ScalarProperty Name="Ethnicity" ColumnName="Ethnicity" />
+          <ScalarProperty Name="Children" ColumnName="Children" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Land_Line" ColumnName="Land_Line" />
+          <ScalarProperty Name="Cell_Phone" ColumnName="Cell_Phone" />
+          <ScalarProperty Name="First_Name_P" ColumnName="First_Name_P" />
+          <ScalarProperty Name="Last_Name_P" ColumnName="Last_Name_P" />
+          <ScalarProperty Name="Street_NO__P" ColumnName="Street_NO#_P" />
+          <ScalarProperty Name="Street_Name_P" ColumnName="Street_Name_P" />
+          <ScalarProperty Name="Subburb_P" ColumnName="Subburb_P" />
+          <ScalarProperty Name="City_P" ColumnName="City_P" />
+          <ScalarProperty Name="State_P" ColumnName="State_P" />
+          <ScalarProperty Name="Post_Code_P" ColumnName="Post_Code_P" />
+          <ScalarProperty Name="Land_Line_P" ColumnName="Land_Line_P" />
+          <ScalarProperty Name="Cell_Phone_P" ColumnName="Cell_Phone_P" />
+          <ScalarProperty Name="First_Name_E" ColumnName="First_Name_E" />
+          <ScalarProperty Name="Last_Name_E" ColumnName="Last_Name_E" />
+          <ScalarProperty Name="Street_NO__E" ColumnName="Street_NO#_E" />
+          <ScalarProperty Name="Street_Name_E" ColumnName="Street_Name_E" />
+          <ScalarProperty Name="Subburb_E" ColumnName="Subburb_E" />
+          <ScalarProperty Name="City_E" ColumnName="City_E" />
+          <ScalarProperty Name="State_E" ColumnName="State_E" />
+          <ScalarProperty Name="Post_Code_E" ColumnName="Post_Code_E" />
+          <ScalarProperty Name="Land_Line_E" ColumnName="Land_Line_E" />
+          <ScalarProperty Name="Cell_Phone_E" ColumnName="Cell_Phone_E" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Visits">
+      <EntityTypeMapping TypeName="MidwifeModel.Visit">
+        <MappingFragment StoreEntitySet="Visits">
+          <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="VisitDate" ColumnName="VisitDate" />
+          <ScalarProperty Name="Visit_ID" ColumnName="Visit_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="MidwifeModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Users_ID" ColumnName="Users_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
